@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    
+    /* -webkit-overflow-scrolling: touch; */
+}
+
+html {
+    font-size: 16px; 
+}
+
+
+
+.img {
+    width: 100%;
+    height: 100%;
+    /* background: yellow; */
+    display: flex;
+    background: url(https://img.zcool.cn/community/01d7065e537ea5a801216518a9dbdd.png?x-oss-process=image/format,webp);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    
+}
+
+
+.first {
+    width: 53.8%; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    
+    
+}
+
+.l-box {
+    width: 26.9%; 
+    height: 50%; 
+    transition: all 1s;
+    position: absolute;
+    z-index: 1;
+    
+    
+    
+}
+.r-box{
+    width: 100%;  
+    height: 50%; 
+    transition: all 1s;
+    z-index: 0;
+    
+    
+    
+    
+}
+
+
+/* 左盒子 */
+.l-box {
+    background: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;/* 调整测轴对齐方式 */
+    justify-content: center;/* 调整主轴对齐方式 */
+    text-align: center;
+    z-index: 1;
+    border-radius: 1.25rem 0 0 1.25rem;
+    overflow: hidden;
+}
+
+.l-box .l-span {
+    font-weight: 300;
+    font-size: 114%;
+    margin-top: 13.4%; 
+    margin-left: 0;
+    transition: all 1s;
+    
+}
+
+.l-box .l-in1, .l-in2{
+    width: 55%; 
+    height: 8%; 
+    margin-left: 0; 
+    margin-top: 4%;
+    transition: all 1s;
+    border-radius: .5rem;
+    border: .0625rem solid white;
+    
+}
+.l-box .l-in2{
+    margin-top: -2.1%;
+
+}
+
+.l-box .l-span1 {
+    margin-left: 0; 
+    font-size: 75%;
+    margin-top: -3.2%; 
+    margin-left: 50%;
+    transition: all 1s;
+    
+}
+
+.l-box .l-span1:hover{
+    color: #0367a6;
+    transition: all 0s;
+}
+
+@font-face {
+    font-family: 登录;
+    src: url(../font/I-PenCrane-B-2.ttf);
+}
+
+.l-box .l-in3 {
+    border: .0625rem solid #0367a6;
+    font-family: 登录;
+    font-size: 114%;
+    margin-left: 0; 
+    margin-top: 4.6%;
+    height: 10.8%;
+    width: 45.82%;
+    border-radius: 1.25rem;
+    box-shadow: .125rem .125rem .125rem black;
+    transition: all 1s;
+    background: linear-gradient(90deg,  #0367a6 10%,#008997 74%,#008B8B);
+    
+}
+
+
+
+
+
+
+
+/* 右盒子 */
+.r-box{
+    background: black;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    border-radius: 1.25rem;
+    overflow: hidden;
+    
+}
+
+@font-face {
+    font-family: 注册;
+    src: url(../font/I-PenCrane-B-2.ttf);
+}
+
+.r-box .r-b-box {
+    font-family: 注册;
+    border: .0625rem solid #0367a6;
+    /* box-shadow: .125rem .125rem .125rem white; */
+    width: 21.25%; 
+    height: 10.78%; 
+    background: linear-gradient(90deg,  #0367a6 10%,#008997 74%,#008B8B);
+    margin-left: 50%;
+    margin-top: 0;
+    border-radius: 1.25rem;
+    /* position: absolute; */
+    transition: all 0.5s;
+    opacity: 1;
+    
+    
+}
+
+
+.r-box .r-b-box span {
+    display: block;
+    /* position: absolute; */
+    /* margin-left: 3.8125rem; */
+    font-size: 114%;
+    line-height: 2.5rem;
+    color: azure; 
+    line-height: 2.5rem;
+    text-align: center;
+    
+}
+
+
+
+/* 转变的盒子*/
+
+.l-box .l-s-span {
+    width: 18.87%;
+    height: 6.73%;
+    line-height: 1.5625rem;
+    font-weight: 300;
+    display: block;
+    font-size: 114%;
+    top: 16%;
+    left: 140%;
+    color: black;
+    z-index: 100;
+    position: absolute;
+    transform: translateY(-125%);
+    transition: all 1s;
+    
+
+}
+
+.l-box .l-s-in1, .l-s-in2,.l-s-in4{
+    width: 55%; 
+    height: 8%; 
+    left: 123%;
+    /* top: 1%; */
+    position: absolute;
+    /* transform: translateX(250%); */
+    transition: all 1s;
+    border-radius: .5rem;
+    border: .0625rem solid white;
+    
+}
+
+.l-box .l-s-in1{
+    top: 28.5%;
+}
+.l-box .l-s-in2{
+    top: 40.5%;
+}
+.l-box .l-s-in4{
+    top: 52.5%;
+}
+
+@font-face {
+    font-family: 注册;
+    src: url(../font/I-PenCrane-B-2.ttf);
+}
+.l-box .l-s-in3 {
+    font-family: 注册;
+    font-size: 114%;
+    left: 127%; 
+    top: 67.9%;
+    height: 10.78%;
+    width: 42.5%;
+    border-radius: 1.25rem;
+    box-shadow: .125rem .125rem .125rem black;
+    position: absolute;
+    transform: translateY(31.25rem);
+    transition: all 1s;
+    background: linear-gradient(90deg,  #0367a6 10%,#008997 74%,#008B8B);
+    border: .0625rem solid #0367a6;
+    
+}
+
+
+
+
+/* 转变的左盒子 */
+@font-face {
+    font-family: 登录;
+    src: url(../font/I-PenCrane-B-2.ttf);
+}
+
+.r-box .l-b-box{
+    font-family: 登录;
+    border: .125rem solid black;
+    /* box-shadow: .125rem .125rem .125rem white; */
+    
+    width: 21.25%; 
+    height: 10.78%; 
+    background: linear-gradient(90deg,  #0367a6 10%,#008997 74%,#008B8B);
+    margin-left: -50%;
+    margin-top: -5.78%;
+    border-radius: 1.25rem;
+    /* position: absolute; */
+    transition: all 0.5s;
+    transform: translateX(-555.55%);
+    
+    opacity: 1;
+    border: .0625rem solid #0367a6;
+    
+    
+}
+
+
+
+.r-box .l-b-box span {
+    display: block;
+    position: absolute;
+    line-height: 100%;
+    text-align: center;
+    top: 25.5%;
+    left: 36%;
+    font-size: 114%;
+    color: azure;
+    
+    
+}
+
+@media only screen and (max-width: 767px) {
+    .first{
+        width: 100%;
+    }
+    .l-box{
+        width: 50%;
+    }
+    .r-box .l-b-box span{
+        left: 29%;
+    }
+}
+   

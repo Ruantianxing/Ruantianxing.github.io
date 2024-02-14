@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+ul{
+    list-style: none;
+}
+.box{
+    width: 100%;
+    height: auto;
+    background: #2D3748;
+    z-index: 0;
+    float: left;
+    position: relative;
+    
+}
+.box .center{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 10;
+}
+.box .center header{
+    padding-top: 2%;
+    width: 100%;
+    height:0.43%;
+    background:  #2D3748;
+    position: sticky;
+    /* 添加粘性到哪 */
+    top:0px;
+}
+.box .center header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.box .center header ul li{
+    box-sizing: border-box;
+    flex: 1;
+    width: 20%;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    padding: 1.5% 0;
+    font-size: large;
+    font-weight: 500;
+    color: white;
+    
+}
+.box .center header ul li a{
+    color: white;
+    text-decoration: none;
+}
+.box .center header ul li:hover{
+    background: #171923;
+    border-radius: 10%;
+}
+/* 卡片 */
+section ul{
+    display: flex;
+    justify-content:space-between ;
+    align-self: self-start;
+    flex-wrap: wrap;
+}
+section ul li {
+    margin-top: 1%;
+    width: 32%;
+    height: 30%;
+    transition: all 0.1s;
+}
+/* section ul li:hover{
+    transform: scale(1.1);
+    z-index: 5;
+} */
+section ul li img{
+    width: 100%;
+    
+}
+section ul li p{
+    line-height: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.box2{
+    width: 40%;
+    height: 70%;
+    background: #2D3748;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    /* z-index: -10; */
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 30%;
+    color: white;
+    position: fixed;
+    z-index: 50;
+}
+.box2 header,footer{
+    height: 8%;
+    background: #2D3748;
+    
+}
+.box2 header{
+    box-sizing: border-box;
+    padding: 1% 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.box2 section{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.box2 section img{
+    width: 20%;
+    margin: 0 5% 0 5%;
+}
+.box2 section .text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.box2 section .text .card-text{
+    overflow: hidden;
+    /* 当文本内容溢出容器时，这个属性会在溢出处显示省略号（...），以指示文本被截断了。 */
+    text-overflow: ellipsis;
+    /* 这个属性用于创建一个块级元素框，并且允许通过其他属性来控制文本的显示方式。 */
+    display: -webkit-box;
+    -webkit-line-clamp: 7; 
+    /* 这个属性指定了在块级元素框中的文本排列方式，这里设置为垂直排列。 */
+    -webkit-box-orient: vertical;
+
+    box-sizing: border-box;
+    padding-right: 5%;
+    /* position: relative; */
+}
+
+.box2 section .text .card-text p{
+    width: 80%;
+    height: auto;
+    background:#252d3b;
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    z-index: 100;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+.box2 footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 1% 3% 1% 0;
+
+}
+.box2 footer button{
+    background: #2D3748;
+    width: 15%;
+    color: white;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10; 
+    display: none; 
+}
+
+@media only screen and (max-width: 767px) {
+    .box{
+        height: auto;
+    }
+    .box .center{
+        width: 100%;
+    }
+    .box .center header ul li{
+        font-size: small;
+    }
+    .box2{
+        width: 90%;
+        height: auto;
+        margin-top: 15%;
+        margin-left: 5%;
+    }
+    .box2 section .text .card-text{
+        -webkit-line-clamp: 5; 
+    }
+    
+}

@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ul{
+    list-style: none;
+}
+/* 头 */
+header{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #1f2531;
+}
+header div{
+    min-width: 4%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+header button{
+    background-color: #1f2531;
+    color: skyblue;
+    border: 1px solid #1f2531;
+    box-sizing: border-box;
+    /* padding: 0.5% 1%; */
+    width: 80%;
+    height: 90%;
+}
+header .pic2 span{
+    color: white;
+    padding-top: 5px;
+    white-space:nowrap;
+}
+header button:hover{
+    background-color: #2D3748;
+}
+
+
+.box{
+    flex: 1;
+    background: #1f2531;
+    float: left;
+}
+.box .sec2{
+    perspective: 1000px;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+.box .sec2 div{
+    width: 30%;
+    height: 55%;
+    position: relative;
+    margin-top: 25%;
+    /* margin-left: -60%; */
+    transform-style: preserve-3d; /* 保持3D变换效果 */
+    transition: transform 1s;
+}
+.box .sec2 div .font,.back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* 隐藏背面内容 */
+}
+.box .sec2 div .back{
+    transform: rotateY(180deg);
+}
+/* box2 */
+.box2{
+    width: 45%;
+    height: 75%;
+    background: #2D3748;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    /* z-index: -10; */
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 30%;
+    color: white;
+    position: fixed;
+    z-index: 80;
+}
+.box2 header,footer{
+    height: 12%;
+    background: #2D3748;
+    
+}
+.box2 header{
+    box-sizing: border-box;
+    padding: 3% 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size:xx-large;
+    font-weight: 400;
+
+}
+.box2 header i{
+    padding: 3% 4% ;
+}
+.box2 section{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.box2 section img{
+    width: 20%;
+    margin: 0 5% 0 5%;
+}
+.box2 section .text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.box2 section .text .card-text{
+    overflow: hidden;
+    /* 当文本内容溢出容器时，这个属性会在溢出处显示省略号（...），以指示文本被截断了。 */
+    text-overflow: ellipsis;
+    /* 这个属性用于创建一个块级元素框，并且允许通过其他属性来控制文本的显示方式。 */
+    display: -webkit-box;
+    -webkit-line-clamp: 10; 
+    /* 这个属性指定了在块级元素框中的文本排列方式，这里设置为垂直排列。 */
+    -webkit-box-orient: vertical;
+
+    box-sizing: border-box;
+    padding-right: 5%;
+    /* position: relative; */
+}
+
+.box2 section .text .card-text p{
+    width: 80%;
+    height: auto;
+    background:#252d3b;
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    z-index: 100;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+.box2 footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 1% 5% 4% 0;
+
+}
+.box2 footer button{
+    background: #2D3748;
+    width: 15%;
+    height: 40%;
+    margin-top: 13%;
+    color: white;
+}
+/* 输入框*/
+.box1{
+    width: 40%;
+    height: 30%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #2D3748;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+.box1 header,footer{
+    height: 25%;
+    background: #2D3748;
+}
+.box1  header{
+    color: white;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-weight: 500;
+    padding: 2% 3% ;
+}
+.box1 section{
+    flex: 1;
+    background:#2d3747;
+}
+.box1  section input{
+    width: 95%;
+    height: 40%;
+    margin: 2% 2.5%;
+    border-radius: 10px;
+    border: 3px solid rgb(251, 77, 106);
+
+}
+.box1  footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.box1  footer button{
+    width: 15%;
+    height: 65%;
+    border-radius: 10px;
+    margin: 2% 3%;
+    border: 1px solid ;
+    background: #60789d;
+}
+
+.box3{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #2D3748;
+    position: absolute;
+    z-index: -50;
+    top: 20%;
+    left: 30%;
+}
+.box3 header,footer{
+    height: 25%;
+    background: #2D3748;
+}
+.box3  header{
+    color: white;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-weight: 500;
+    padding: 2% 3% ;
+}
+.box3 section{
+    flex: 1;
+    background:#2d3747;
+}
+.box3 section span{
+    display: block;
+    color: white;
+    width: 80%;
+    height: 40%;
+    margin: 7% 12.5%;
+    border-radius: 10px;
+}
+.box3  footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.box3  footer button{
+    width: 15%;
+    height: 65%;
+    border-radius: 10px;
+    margin: 2% 3%;
+    border: 1px solid ;
+    background: #60789d;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 55; 
+    display: none; 
+}
+
+@media only screen and (max-width: 767px) {
+    .box .sec2{
+        width: 100%;
+        /* height: auto; */
+    }
+    .box .sec2 div{
+        width: 33%;
+        height: 30%;
+        /* height: calc(width*227/150); */
+    }
+    .box .sec2 div{
+        margin-left: 0%;
+    }
+    .box2{
+        width: 90%;
+        height: auto;
+        margin-top: 15%;
+        margin-left: 5%;
+    }
+    .box2 section .text .card-text{
+        -webkit-line-clamp: 5; 
+    }
+    .box1{
+        width: 94%;
+        height: 30%;
+        left: 3%;
+    }
+    .box3{
+        width: 94%;
+        height: 30%;
+        left: 3%;
+    }
+    
+}
